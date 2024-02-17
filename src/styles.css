@@ -1,0 +1,21 @@
+footer {
+    background-color: #2e7158;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+table td{
+
+    color: rgb(0, 0, 0);
+
+}
+
+table th{
+
+    color: rgb(10, 10, 10);
+
+}
