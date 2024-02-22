@@ -36,26 +36,27 @@ export const Plantas = () => {
 
             <h1>Plantas</h1>
             
-                <table className="table-responsive">
+                <table className="table table-warning table-striped">
                     <thead>
                         <tr>
-                        <th scope="col">id</th>
-                        <th scope="col">Nombre</th>
-                        <th scope="col">Especie</th>
-                        <th scope="col">Descripcion</th>
-                        <th scope="col">Fecha de Plantación</th>
-                        <th scope="col">id_usuarios</th>
+                        <th scope="col" className="border border-secondary border-2 text-center">id</th>
+                        <th scope="col" className="border border-secondary border-2 text-center">Nombre</th>
+                        <th scope="col" className="border border-secondary border-2 text-center">Especie</th>
+                        <th scope="col" className="border border-secondary border-2 text-center">Descripcion</th>
+                        <th scope="col" className="border border-secondary border-2 text-center">Fecha de Plantación</th>
+                        <th scope="col" className="border border-secondary border-2 text-center">id_usuarios</th>
                         </tr>
                     </thead>
                     
                     <tbody>
                         {planta.map( (plant) =>(
                             <tr key={plant.id}> 
-                                <td>{plant.nombre}</td>
-                                <td>{plant.especie} </td>
-                                <td>{plant.descripcion} </td>
-                                <td>{plant.fecha_plantacion} </td>
-                                <td>{plant.id_usuarios} </td>
+                                <th scope="row" className="border border-secondary border-2 text-center"></th>
+                                <td className="border border-secondary border-2 text-center">{plant.nombre}</td>
+                                <td className="border border-secondary border-2 text-center">{plant.especie} </td>
+                                <td className="border border-secondary border-2 text-center">{plant.descripcion} </td>
+                                <td className="border border-secondary border-2 text-center">{plant.fecha_plantacion} </td>
+                                <td className="border border-secondary border-2 text-center">{plant.id_usuarios} </td>
                             </tr>
                         ) )}
                     </tbody>

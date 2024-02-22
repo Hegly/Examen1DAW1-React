@@ -33,24 +33,25 @@ export const Eventos = () => {
 
             <h1>Eventos</h1>
             
-                <table className="table-responsive">
+                <table className="table table-info table-striped">
                     <thead>
                         <tr>
-                        <th scope="col">id</th>
-                        <th scope="col">Titulo</th>
-                        <th scope="col">Descripcion</th>
-                        <th scope="col">Fecha</th>
-                        <th scope="col">Lugar</th>
+                        <th scope="col" className="border border-secondary border-2 text-center">id</th>
+                        <th scope="col" className="border border-secondary border-2 text-center">Titulo</th>
+                        <th scope="col" className="border border-secondary border-2 text-center">Descripcion</th>
+                        <th scope="col" className="border border-secondary border-2 text-center">Fecha</th>
+                        <th scope="col" className="border border-secondary border-2 text-center">Lugar</th>
                         </tr>
                     </thead>
                     
                     <tbody>
                         {evento.map( (event) =>(
                             <tr key={event.id}> 
-                                <td>{event.titulo}</td>
-                                <td>{event.descripcion} </td>
-                                <td>{event.fecha} </td>
-                                <td>{event.lugar} </td>
+                                 <th scope="row" className="border border-secondary border-2 text-center"></th>
+                                <td className="border border-secondary border-2 text-center">{event.titulo}</td>
+                                <td className="border border-secondary border-2 text-center">{event.descripcion} </td>
+                                <td className="border border-secondary border-2 text-center">{event.fecha} </td>
+                                <td className="border border-secondary border-2 text-center">{event.lugar} </td>
                             </tr>
                         ) )}
                     </tbody>

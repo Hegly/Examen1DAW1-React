@@ -29,22 +29,23 @@ export const Usuarios = () => {
 
             <h1>Usuarios</h1>
             
-                <table className="table-responsive">
+                <table className="table table-success table-striped">
                     <thead>
                         <tr>
-                        <th scope="col">id</th>
-                        <th scope="col">Nombre</th>
-                        <th scope="col">Correo</th>
-                        <th scope="col">Contraseña</th>
+                        <th scope="col" className="border border-secondary border-2 text-center">id</th>
+                        <th scope="col" className="border border-secondary border-2 text-center">Nombre</th>
+                        <th scope="col" className="border border-secondary border-2 text-center">Correo</th>
+                        <th scope="col" className="border border-secondary border-2 text-center">Contraseña</th>
                         </tr>
                     </thead>
                     
                     <tbody>
                         {users.map( (user) =>(
                             <tr key={user.id}> 
-                                <td>{user.nombre}</td>
-                                <td>{user.correo} </td>
-                                <td>{user.contraseña} </td>
+                                <th scope="row" className="border border-secondary border-2 text-center"></th>
+                                <td className="border border-secondary border-2 text-center">{user.nombre}</td>
+                                <td className="border border-secondary border-2 text-center">{user.correo} </td>
+                                <td className="border border-secondary border-2 text-center">{user.contraseña} </td>
                             </tr>
                         ) )}
                     </tbody>
