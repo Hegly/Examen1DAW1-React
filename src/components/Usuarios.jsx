@@ -9,24 +9,47 @@ export const Usuarios = () => {
 
     const [contrasena, setContrasena] = useState();
 
-    const usuarioHandler = (event) =>{
+    const nombreHandler = (event) =>{
 
-        console.log(event);
+        const { name, value } = event.target;
+        setNombre(value);
 
+    }
+
+    const correoHandler = (event) =>{
+
+        const { name, value } = event.target;
+        setCorreo(value);
+
+    }
+
+    const contrasenaHandler = (event) =>{
+
+        const { name, value } = event.target;
+        setContrasena(value);
+
+    }
+
+    const submitHandler=()=>{
+        event.preventDefault();
+        const dataSend = {
+            nombre : nombre,
+            correo : correo,
+            contraseña : contrasena
+        }
     }
 
     return (
     <>
         <div className='container mt-5'>
-            <form>
+            <form onSubmit={submitHandler}>
                 <fieldset>
                     <legend>Registro de Usuarios</legend>
 
                     <div class="form-group row">
                             <label for="staticNombre" class="col-sm-2 col-form-label">Nombre</label>
                         <div class="col-sm-10">
-                            <input type="nombre" class="form-control" id="exampleInputNombre1" name="nombre" placeholder="Escriba el nombre del usuario"
-                            onChange={usuarioHandler}
+                            <input type="nombre" class="form-control" id="exampleInputNombre1" name="nombre" placeholder="Escriba el nombre del usuario" onChange={nombreHandler}
                             />
                         </div>
                         </div>
@@ -34,14 +57,16 @@ export const Usuarios = () => {
                         <div class="form-group row mt-3">
                             <label for="staticCorreo" class="col-sm-2 col-form-label">Correo</label>
                         <div class="col-sm-10">
-                            <input type="correo" class="form-control" id="exampleInputCorreo1" name="correo" placeholder="Escriba el correo del usuario"/>
+                            <input type="correo" class="form-control" id="exampleInputCorreo1" name="correo" placeholder="Escriba el correo del usuario" onChange={correoHandler}
+                            />
                         </div>
                         </div>
 
                         <div class="form-group row mt-3">
                             <label for="staticContrasena" class="col-sm-2 col-form-label">Contraseña</label>
                         <div class="col-sm-10">
-                            <input type="contrasena" class="form-control" id="exampleInputContrasena1" name="contrasena" placeholder="Escriba la contraseña del usuario"/>
+                            <input type="contrasena" class="form-control" id="exampleInputContrasena1" name="contrasena" placeholder="Escriba la contraseña del usuario" onChange={contrasenaHandler}
+                            />
                         </div>
                         </div>
 
